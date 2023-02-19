@@ -22,10 +22,14 @@ const ContactsList = ({ contacts }) => {
         type="search"
         placeholder="Filter content"
       />
-
+      <p>Total contacts ({filtered.length})</p>
       <ul>
         {filtered.map((contact, index) => {
-          return <li key={index}>{contact.fullname}-------{contact.phone_number}</li>;
+          return (
+            <li key={index}>
+              {contact.fullname}-------{contact.phone_number}
+            </li>
+          );
         })}
       </ul>
     </>
