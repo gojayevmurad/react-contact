@@ -3,9 +3,6 @@ import React, { useEffect, useState } from "react";
 const ContactsList = ({ contacts }) => {
   const [keyword, setKeyword] = useState("");
 
-  useEffect(() => {
-    console.log(keyword);
-  }, [keyword]);
 
   const filtered = contacts.filter((el) => {
     return Object.keys(el).some((key) =>
